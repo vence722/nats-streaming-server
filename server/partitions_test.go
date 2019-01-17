@@ -15,7 +15,7 @@ package server
 
 import (
 	"fmt"
-	"github.com/nats-io/go-nats-streaming/pb"
+	"github.com/nats-io/nats-streaming-server/pb"
 	"github.com/nats-io/nuid"
 	"strings"
 	"sync"

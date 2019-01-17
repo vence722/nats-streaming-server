@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/nats-io/go-nats-streaming"
-	"github.com/nats-io/go-nats-streaming/pb"
+	"github.com/nats-io/nats-streaming-server/pb"
 	"github.com/nats-io/nats-streaming-server/stores"
 )
 

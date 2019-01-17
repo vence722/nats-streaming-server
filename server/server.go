@@ -33,7 +33,7 @@ import (
 	natsdLogger "github.com/nats-io/gnatsd/logger"
 	"github.com/nats-io/gnatsd/server"
 	"github.com/nats-io/go-nats"
-	"github.com/nats-io/go-nats-streaming/pb"
+	"github.com/nats-io/nats-streaming-server/pb"
 	"github.com/nats-io/nuid"
 
 	"github.com/nats-io/nats-streaming-server/logger"
@@ -463,6 +463,7 @@ func (c *channel) pubMsgToMsgProto(pm *pb.PubMsg, seq uint64) *pb.MsgProto {
 		Subject:   pm.Subject,
 		Reply:     pm.Reply,
 		Data:      pm.Data,
+		Topic:	   pm.Topic,
 		Timestamp: time.Now().UnixNano(),
 	}
 	if c.lTimestamp > 0 && m.Timestamp < c.lTimestamp {

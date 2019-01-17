@@ -23,7 +23,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/nats-io/go-nats-streaming/pb"
+	"github.com/nats-io/nats-streaming-server/pb"
 )
 
 func TestCryptoStoreKeyIsCleared(t *testing.T) {
