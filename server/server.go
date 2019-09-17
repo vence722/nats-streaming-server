@@ -1356,6 +1356,7 @@ func RunServerWithOpts(stanOpts *Options, natsOpts *server.Options) (newServer *
 	} else {
 		nOpts = natsOpts.Clone()
 	}
+	nOpts.MaxPayload = 1024 * 1024 * 8 // hardcode MAX_PAYLOAD to 8M
 	// For now, no support for partitioning and clustering at the same time
 	if sOpts.Partitioning && sOpts.Clustering.Clustered {
 		return nil, fmt.Errorf("stan: channels partitioning in clustering mode is not supported")
