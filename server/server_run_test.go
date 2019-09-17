@@ -513,7 +513,7 @@ func TestPersistentStoreNoPanicOnShutdown(t *testing.T) {
 func TestProcessCommandLineArgs(t *testing.T) {
 	var host string
 	var port int
-	cmd := flag.NewFlagSet("nats-streaming-server", flag.ExitOnError)
+	cmd := flag.NewFlagSet("nats-streaming-server-modified", flag.ExitOnError)
 	cmd.StringVar(&host, "a", "0.0.0.0", "Host.")
 	cmd.IntVar(&port, "p", 4222, "Port.")
 

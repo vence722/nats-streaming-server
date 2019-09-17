@@ -26,7 +26,7 @@ import (
 func init() {
 	// Set the process name so signal code use this process name
 	// instead of gnatsd.
-	natsd.SetProcessName("nats-streaming-server")
+	natsd.SetProcessName("nats-streaming-server-modified")
 }
 
 // Signal Handling

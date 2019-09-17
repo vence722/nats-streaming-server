@@ -1409,7 +1409,7 @@ func RunServerWithOpts(stanOpts *Options, natsOpts *server.Options) (newServer *
 		s.configureLogger()
 	}
 
-	s.log.Noticef("Starting nats-streaming-server[%s] version %s", sOpts.ID, VERSION)
+	s.log.Noticef("Starting nats-streaming-server-modified[%s] version %s", sOpts.ID, VERSION)
 
 	// ServerID is used to check that a brodcast protocol is not ours,
 	// for instance with FT. Some err/warn messages may be printed

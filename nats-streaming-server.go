@@ -29,7 +29,7 @@ import (
 )
 
 var usageStr = `
-Usage: nats-streaming-server [options]
+Usage: nats-streaming-server-modified [options]
 
 Streaming Server Options:
     -cid, --cluster_id  <string>         Cluster ID (default: test-cluster)
@@ -47,7 +47,7 @@ Streaming Server Options:
     -hbt, --hb_timeout <duration>        How long server waits for a heartbeat response
     -hbf, --hb_fail_count <int>          Number of failed heartbeats before server closes the client connection
           --ft_group <string>            Name of the FT Group. A group can be 2 or more servers with a single active server and all sharing the same datastore
-    -sl,  --signal <signal>[=<pid>]      Send signal to nats-streaming-server process (stop, quit, reopen)
+    -sl,  --signal <signal>[=<pid>]      Send signal to nats-streaming-server-modified process (stop, quit, reopen)
           --encrypt <bool>               Specify if server should use encryption at rest
           --encryption_cipher <string>   Cipher to use for encryption. Currently support AES and CHAHA (ChaChaPoly). Defaults to AES
           --encryption_key <sting>       Encryption Key. It is recommended to specify it through the NATS_STREAMING_ENCRYPTION_KEY environment variable instead
@@ -169,7 +169,7 @@ func parseFlags() (*stand.Options, *natsd.Options) {
 
 	stanOpts, natsOpts, err := stand.ConfigureOptions(fs, os.Args[1:],
 		func() {
-			fmt.Printf("nats-streaming-server version %s, ", stand.VERSION)
+			fmt.Printf("nats-streaming-server-modified version %s, ", stand.VERSION)
 			natsd.PrintServerAndExit()
 		},
 		fs.Usage,

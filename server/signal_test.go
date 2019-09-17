@@ -132,7 +132,7 @@ func (sc *stderrCatcher) Write(p []byte) (n int, err error) {
 
 func TestSignalTrapsSIGTERM(t *testing.T) {
 	// This test requires that the
-	cmd := exec.Command("nats-streaming-server")
+	cmd := exec.Command("nats-streaming-server-modified")
 	sc := &stderrCatcher{}
 	cmd.Stderr = sc
 	cmd.Start()

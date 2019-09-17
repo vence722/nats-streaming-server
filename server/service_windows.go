@@ -27,14 +27,14 @@ import (
 )
 
 const (
-	serviceName     = "nats-streaming-server"
+	serviceName     = "nats-streaming-server-modified"
 	reopenLogCode   = 128
 	reopenLogCmd    = svc.Cmd(reopenLogCode)
 	acceptReopenLog = svc.Accepted(reopenLogCode)
 )
 
 // winServiceWrapper implements the svc.Handler interface for implementing
-// nats-streaming-server as a Windows service.
+// nats-streaming-server-modified as a Windows service.
 type winServiceWrapper struct {
 	sOpts *Options
 	nOpts *natsd.Options
